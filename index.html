@@ -3,31 +3,21 @@
   body, html { 
     margin: 0; 
     padding: 0; 
-    /* Absolutní průhlednost pozadí */
     background: transparent !important; 
     overflow: hidden; 
   }
   
   .container {
-    /* Změna: Karta nyní vyplní 100 % šířky okna Pipup */
     width: 100vw; 
-    /* Volitelné: Můžeš přidat 'min-height: 100vh', pokud chceš, aby byla na celou výšku */
-    
     background: white; 
-    /* Větší padding, aby obsah nebyl nalepený na okraji TV */
     padding: 50px; 
-    box-sizing: border-box; /* Důležité: padding se započítá do šířky */
-    
-    /* Na TV z dálky zaoblení a stín u fullscreen karty tolik nevynikne, */
-    /* ale pro jistotu je tu necháme: */
-    border-radius: 0px; /* Pro fullscreen lépe 0, nebo jen malé zaoblení */
+    box-sizing: border-box; 
+    border-radius: 0px; 
     box-shadow: 0 10px 40px rgba(0,0,0,0.5); 
-    
     display: flex;
     flex-direction: column;
   }
 
-  /* --- OBŘÍ AVATAR (Ponechán velký, jak jsi chtěl) --- */
   img#avatar {
     width: 200px; 
     height: 200px; 
@@ -37,7 +27,6 @@
     border: 5px solid #cc0000; 
   }
 
-  /* --- NÁHLED V PLNÉ ŠÍŘI KARTY --- */
   img#thumb {
     width: 100%; 
     height: auto; 
@@ -46,14 +35,24 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   }
 
-  /* Texty pro TV z dálky (Zvětšeny pro lepší čitelnost) */
-  .channel-name { font-weight: bold; color: #cc0000; font-size: 3.5em; line-height: 1.1; }
-  .time-text { color: #666; font-size: 2.0em; margin-top: 10px; }
-  .notif-text { font-weight: bold; color: #0056b3; font-size: 2.8em; margin-bottom: 35px; line-height: 1.3; }
+  .channel-name { 
+    font-weight: bold; 
+    color: #cc0000; 
+    font-size: 3.5em; 
+    line-height: 1.1; 
+  }
+
+  .notif-text { 
+    font-weight: bold; 
+    color: #0056b3; 
+    font-size: 2.8em; 
+    margin-bottom: 35px; 
+    line-height: 1.3; 
+  }
 </style>
 
 <div class="container">
-    <div style="display: flex; gap: 45px; align-items: center; margin-bottom: 40px;">
+    <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 40px;">
         <img id="avatar" src="https://yt3.ggpht.com/rhniOK2Ma0d35JogKWMhBFDhek-BntNL-FUbWvz-4Qo8Z7CdRVtzQPryx62znRBvbpSkqU2I5g=s240-c-k-c0x00ffffff-no-rj">
         <div>
             <div class="channel-name">🔴 Live Walking NYC</div>
