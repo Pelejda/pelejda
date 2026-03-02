@@ -3,57 +3,56 @@
   body, html { 
     margin: 0; 
     padding: 0; 
-    /* Absolutní průhlednost pozadí - odstraňuje bílou plochu */
     background: transparent !important; 
     overflow: hidden; 
   }
   
   .container {
-    width: 750px; /* Trochu jsem zvětšil celou kartu, aby se tam větší obrázky vešly */
+    /* Karta je nyní 1000px široká, aby náhled vynikl */
+    width: 1000px; 
     background: white; 
-    padding: 25px; /* Více prostoru kolem obsahu */
-    border-radius: 20px; /* Výraznější zaoblení */
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6); /* Hlubší stín pro lepší vizuál */
+    padding: 40px; 
+    border-radius: 30px; 
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7); 
     display: flex;
     flex-direction: column;
   }
 
-  /* --- ZVĚTŠENÝ AVATAR --- */
+  /* --- OBŘÍ AVATAR --- */
   img#avatar {
-    width: 100px; /* Zvětšeno z 80px */
-    height: 100px; 
+    width: 180px; /* Masivní zvětšení */
+    height: 180px; 
     border-radius: 50%; 
     object-fit: cover;
     flex-shrink: 0;
-    border: 3px solid #eee; /* Výraznější okraj */
+    border: 5px solid #cc0000; /* Červený okraj ladící k YouTube */
   }
 
-  /* --- ZVĚTŠENÝ NÁHLED VIDEA --- */
+  /* --- NÁHLED V PLNÉ ŠÍŘI --- */
   img#thumb {
-    width: 100%; /* Vyplní celou šířku kontejneru */
+    width: 100%; 
     height: auto; 
-    border-radius: 12px; 
+    border-radius: 20px; 
     display: block;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   }
+
+  /* Texty pro TV z dálky */
+  .channel-name { font-weight: bold; color: #cc0000; font-size: 3.2em; line-height: 1.1; }
+  .time-text { color: #666; font-size: 1.8em; margin-top: 10px; }
+  .notif-text { font-weight: bold; color: #0056b3; font-size: 2.5em; margin-bottom: 30px; line-height: 1.3; }
 </style>
 
 <div class="container">
-    <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px;">
+    <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 35px;">
         <img id="avatar" src="https://yt3.ggpht.com/ytc/AIdro_krhubnODy21eh-ZZ34y6QxTq6j-OXSZ1HMuGy0hsdIB3k=s240-c-k-c0x00ffffff-no-rj">
         <div>
-            <div style="font-weight: bold; color: #cc0000; font-size: 1.8em; line-height: 1.1;">
-                %antitle
-            </div>
-            <div style="color: #666; font-size: 1.2em; margin-top: 5px;">
-                14.55
-            </div>
+            <div class="channel-name">%antitle</div>
+            <div class="time-text">14.57</div>
         </div>
     </div>
     
-    <div style="font-weight: bold; color: #0056b3; font-size: 1.5em; margin-bottom: 20px; line-height: 1.4;">
-        %antext
-    </div>
+    <div class="notif-text">%antext</div>
     
     <img id="thumb" src="https://i.ytimg.com/vi/Dd187IeVcKs/sddefault_live.jpg">
 </div>
