@@ -1,16 +1,37 @@
+<meta charset="UTF-8">
 <style>
   body, html { 
     margin: 0; 
     padding: 0; 
-    background: transparent !important; /* Tohle zruší tu bílou plochu */
-    overflow: hidden;
+    /* Absolutní průhlednost pozadí - odstraňuje bílou plochu */
+    background: transparent !important; 
+    overflow: hidden; 
   }
+  
   .container {
-    width: 700px; 
-    background: white; /* Bílá bude jen ta karta */
-    padding: 20px; 
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    display: inline-block; /* Karta se stáhne podle obsahu */
+    width: 750px; /* Trochu jsem zvětšil celou kartu, aby se tam větší obrázky vešly */
+    background: white; 
+    padding: 25px; /* Více prostoru kolem obsahu */
+    border-radius: 20px; /* Výraznější zaoblení */
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6); /* Hlubší stín pro lepší vizuál */
+    display: flex;
+    flex-direction: column;
   }
-</style>
+
+  /* --- ZVĚTŠENÝ AVATAR --- */
+  img#avatar {
+    width: 100px; /* Zvětšeno z 80px */
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid #eee; /* Výraznější okraj */
+  }
+
+  /* --- ZVĚTŠENÝ NÁHLED VIDEA --- */
+  img#thumb {
+    width: 100%; /* Vyplní celou šířku kontejneru */
+    height: auto; 
+    border-radius: 12px; 
+    display: block;
+    box-shadow: 0
