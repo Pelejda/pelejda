@@ -1,22 +1,23 @@
 <meta charset="UTF-8">
 <style>
-  body { 
+  body, html { 
     margin: 0; 
     padding: 0; 
-    /* Průhledné pozadí, aby nebyla bílá plocha vpravo */
-    background: rgba(0,0,0,0.5); 
-    display: flex;
-    justify-content: flex-start; /* Karta bude vlevo, zbytek tmavý */
-    height: 100vh;
+    background: white; /* Nebo transparent, pokud chceš jen kartu */
   }
   .container {
-    width: 700px; /* Tvoje požadovaná šířka */
-    background: white;
-    height: 100vh; /* Na celou výšku okna Pipup */
-    padding: 20px;
+    width: 700px; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
     box-sizing: border-box;
     font-family: sans-serif;
-    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+  }
+  img#thumb {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    display: block; /* Důležité: odstraní mezeru pod obrázkem */
   }
 </style>
 
@@ -25,9 +26,9 @@
         <img src="https://yt3.ggpht.com/ytc/AIdro_krhubnODy21eh-ZZ34y6QxTq6j-OXSZ1HMuGy0hsdIB3k=s240-c-k-c0x00ffffff-no-rj" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
         <div>
             <div style="font-weight: bold; color: #cc0000; font-size: 1.5em;">%antitle</div>
-            <div style="color: #666;">14.48</div>
+            <div style="color: #666;">14.50</div>
         </div>
     </div>
     <div style="font-weight: bold; color: #0056b3; font-size: 1.3em; margin-bottom: 15px;">%antext</div>
-    <img src="https://i.ytimg.com/vi/Dd187IeVcKs/sddefault_live.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+    <img id="thumb" src="https://i.ytimg.com/vi/Dd187IeVcKs/sddefault_live.jpg">
 </div>
