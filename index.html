@@ -1,34 +1,16 @@
-<meta charset="UTF-8">
 <style>
   body, html { 
     margin: 0; 
     padding: 0; 
-    background: white; /* Nebo transparent, pokud chceš jen kartu */
+    background: transparent !important; /* Tohle zruší tu bílou plochu */
+    overflow: hidden;
   }
   .container {
     width: 700px; 
-    display: flex; 
-    flex-direction: column; 
+    background: white; /* Bílá bude jen ta karta */
     padding: 20px; 
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  img#thumb {
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
-    display: block; /* Důležité: odstraní mezeru pod obrázkem */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: inline-block; /* Karta se stáhne podle obsahu */
   }
 </style>
-
-<div class="container">
-    <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 15px;">
-        <img src="https://yt3.ggpht.com/ytc/AIdro_krhubnODy21eh-ZZ34y6QxTq6j-OXSZ1HMuGy0hsdIB3k=s240-c-k-c0x00ffffff-no-rj" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-        <div>
-            <div style="font-weight: bold; color: #cc0000; font-size: 1.5em;">%antitle</div>
-            <div style="color: #666;">14.50</div>
-        </div>
-    </div>
-    <div style="font-weight: bold; color: #0056b3; font-size: 1.3em; margin-bottom: 15px;">%antext</div>
-    <img id="thumb" src="https://i.ytimg.com/vi/Dd187IeVcKs/sddefault_live.jpg">
-</div>
