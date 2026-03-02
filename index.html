@@ -1,40 +1,33 @@
 <meta charset="UTF-8">
 <style>
-  /* Odstranění okrajů prohlížeče */
-  body, html { margin: 0; padding: 0; background: transparent; overflow: hidden; }
-  
-  .card {
-    display: flex; 
-    flex-direction: column; 
-    /* Karta vyplní celé okno, které definuješ v Pipupu */
-    width: 100vw; 
-    height: 100vh; 
-    padding: 30px; 
-    font-family: sans-serif; 
-    background: white; 
+  body { 
+    margin: 0; 
+    padding: 0; 
+    /* Průhledné pozadí, aby nebyla bílá plocha vpravo */
+    background: rgba(0,0,0,0.5); 
+    display: flex;
+    justify-content: flex-start; /* Karta bude vlevo, zbytek tmavý */
+    height: 100vh;
+  }
+  .container {
+    width: 700px; /* Tvoje požadovaná šířka */
+    background: white;
+    height: 100vh; /* Na celou výšku okna Pipup */
+    padding: 20px;
     box-sizing: border-box;
+    font-family: sans-serif;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
   }
 </style>
 
-<div class="card">
-    <div style="display: flex; gap: 25px; align-items: center; margin-bottom: 25px;">
-        <img src="https://yt3.ggpht.com/ytc/AIdro_krhubnODy21eh-ZZ34y6QxTq6j-OXSZ1HMuGy0hsdIB3k=s240-c-k-c0x00ffffff-no-rj" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid #eee;">
-        
-        <div style="min-width: 0;">
-            <div style="font-weight: bold; color: #cc0000; font-size: 2.2em; line-height: 1.1; margin-bottom: 5px;">
-                %antitle
-            </div>
-            <div style="color: #666; font-size: 1.4em;">
-                02.03.26 14.44
-            </div>
+<div class="container">
+    <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 15px;">
+        <img src="https://yt3.ggpht.com/ytc/AIdro_krhubnODy21eh-ZZ34y6QxTq6j-OXSZ1HMuGy0hsdIB3k=s240-c-k-c0x00ffffff-no-rj" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+        <div>
+            <div style="font-weight: bold; color: #cc0000; font-size: 1.5em;">%antitle</div>
+            <div style="color: #666;">14.48</div>
         </div>
     </div>
-
-    <div style="font-weight: bold; color: #0056b3; font-size: 1.8em; margin-bottom: 20px; line-height: 1.3;">
-        %antext
-    </div>
-
-    <div style="line-height: 0; width: 100%; flex-grow: 1; display: flex; align-items: flex-start;">
-        <img src="https://i.ytimg.com/vi/Dd187IeVcKs/sddefault_live.jpg" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.2); object-fit: contain;">
-    </div>
+    <div style="font-weight: bold; color: #0056b3; font-size: 1.3em; margin-bottom: 15px;">%antext</div>
+    <img src="https://i.ytimg.com/vi/Dd187IeVcKs/sddefault_live.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
 </div>
